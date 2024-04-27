@@ -81,7 +81,7 @@ body {
   display: flex;
   align-items: center;
   /* задаём отступы от краёв блока */
-  padding: 0 calc(var(--size) / 6) 0 calc(var(--size) / 40);
+  padding: 0 calc(var(--size) / 6) 0 calc(var(--size) / 70);
   /* устанавливаем размеры */
   width: 50%;
   height: 50%;
