@@ -81,10 +81,10 @@ body {
   display: flex;
   align-items: center;
   /* задаём отступы от краёв блока */
-  padding: 0 calc(var(--size) / 6) 0 calc(var(--size) / 70);
+  padding: 0 calc(var(--size) / 6) 0 calc(var(--size) / 90);
   /* устанавливаем размеры */
-  width: 60%;
-  height: 60%;
+  width: 50%;
+  height: 50%;
   /* устанавливаем координаты, относительно которых будем вращать текст */
   transform-origin: center right;
   /* поворачиваем текст */
