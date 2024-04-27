@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" >
 <head>
   <meta charset="UTF-8">
-  <title>Колесо фортуны</title>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script src="js/coleco.js"></script>
+  <title>Колесо удачи</title>
+  <!-- используем всю ширину экрана -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- подключаем стили -->
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-  <button onclick="btn_test" id="btn_one">Нажми для теста</button>
+<!-- главный блок -->
+<div class="deal-wheel">
+  <!-- блок с призами -->
+  <ul class="spinner"></ul>
+  <!-- язычок барабана -->
+  <div class="ticker"></div>
+  <!-- кнопка -->
+  <button class="btn-spin">Испытай удачу</button>
+</div>
+  <!-- подключаем скрипт -->
+  <script  src="js/script.js"></script>
+
 </body>
 </html>
