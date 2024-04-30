@@ -23,6 +23,14 @@ function rotateFunction(){
     console.log(angle);
     console.log(360 / prizes.length * randomIndex);
     console.log(prize);
+
+    document.getElementById("spin").disabled = true; 
+    document.getElementById("spin")
+
+
+    setTimeout(function(){
+      Swal.fire(`${prize}`);
+    }, 5000)
   }
 
   var element = document.getElementById('mainbox');
