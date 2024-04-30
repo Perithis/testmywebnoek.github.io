@@ -1,217 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Колесо удачи</title>
-    <style>
-        /* CSS */
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #wheel {
-            position: relative;
-        }
-
-        #wheel .right {
-            width: 420px;
-            height: 420px;
-            border-radius: 50%;
-            box-shadow: -2px 3px 10px rgba(0, 0, 0, .1);
-        }
-
-        #wheel .right:after {
-            content: "";
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
-            border-radius: 50%;
-            box-shadow: inset 4px 8px rgba(0, 0, 0, .25);
-        }
-
-        #wheel .circle {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            box-sizing: border-box;
-            background: #eee;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            border: solid 10px #fff;
-            border-radius: 50%;
-            overflow: hidden;
-        }
-
-        #wheel .circle li {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 50%;
-            height: 100%;
-            box-sizing: border-box;
-            border-left: solid 1px #fff;
-            transform-origin: 0 50%;
-        }
-
-        #wheel .circle li div {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            box-sizing: border-box;
-            padding: 0 10px 0 0;
-            text-align: right;
-            transform-origin: 0 0;
-        }
-
-        #wheel .circle li div span {
-            position: relative;
-            top: -10px;
-            display: inline-block;
-            max-width: 125px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            color: #fff;
-            font-weight: 700;
-            line-height: 20px;
-            text-shadow: 0 0 3px rgba(0, 0, 0, .5);
-        }
-
-        #wheel .dot {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            display: block;
-            width: 30px;
-            height: 30px;
-            margin: -14.5px 0 0 -15px;
-            background: #fff;
-            border-radius: 50%;
-            box-shadow: 2px 3px rgba(0, 0, 0, .25);
-            z-index: 1;
-        }
-
-        #wheel .arrow {
-            position: absolute;
-            top: calc(50% + 0.5px);
-            right: -2px;
-            display: block;
-            width: 12px;
-            height: 12px;
-            background: #fff;
-            transform: translate(-50%, -50%) rotate(45deg);
-            content: "";
-            z-index: 1;
-        }
-
-        #spinButton {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<title>Wheel</title>
 </head>
 <body>
-    <!-- HTML -->
-    <div id="wheel">
-        <div class="right">
-            <ul class="circle" style="transform: rotate(4826.99deg);">
-                <li style="clip-path: polygon(0px -100px, 500px 50%, calc(212.132px) calc(50% - 212.132px), 0px 50%); transform: rotate(0deg) translateZ(0px); background: rgb(230, 43, 0);">
-                    <div style="transform: rotate(-67.5deg);">
-                        <span>Массаж 1 зоны в подарок</span>
-                    </div>
-                </li>
-                <li style="clip-path: polygon(0px -100px, 500px 50%, calc(212.132px) calc(50% - 212.132px), 0px 50%); transform: rotate(45deg) translateZ(0px); background: rgb(230, 215, 0);">
-                    <div style="transform: rotate(-67.5deg);">
-                        <span>Пилинг в подарок</span>
-                    </div>
-                </li>
-                <li style="clip-path: polygon(0px -100px, 500px 50%, calc(212.132px) calc(50% - 212.132px), 0px 50%); transform: rotate(90deg) translateZ(0px); background: rgb(72, 230, 0);">
-                    <div style="transform: rotate(-67.5deg);">
-                        <span>Купон на скидку 50% на аппаратные процедуры</span>
-                    </div>
-                </li>
-                <li style="clip-path: polygon(0px -100px, 500px 50%, calc(212.132px) calc(50% - 212.132px), 0px 50%); transform: rotate(135deg) translateZ(0px); background: rgb(0, 230, 100);">
-                    <div style="transform: rotate(-67.5deg);">
-                        <span>Подарочный сертификат на 5000 руб.</span>
-                    </div>
-                </li>
-                <li style="clip-path: polygon(0px -100px, 500px 50%, calc(212.132px) calc(50% - 212.132px), 0px 50%); transform: rotate(180deg) translateZ(0px); background: rgb(0, 186, 230);">
-                    <div style="transform: rotate(-67.5deg);">
-                        <span>Купон на скидку 35%</span>
-                    </div>
-                </li>
-                <li style="clip-path: polygon(0px -100px, 500px 50%, calc(212.132px) calc(50% - 212.132px), 0px 50%); transform: rotate(225deg) translateZ(0px); background: rgb(0, 14, 230);">
-                    <div style="transform: rotate(-67.5deg);">
-                        <span>Карбоновый пилинг со скидкой 50%</span>
-                    </div>
-                </li>
-                <li style="clip-path: polygon(0px -100px, 500px 50%, calc(212.132px) calc(50% - 212.132px), 0px 50%); transform: rotate(270deg) translateZ(0px); background: rgb(158, 0, 230);">
-                    <div style="transform: rotate(-67.5deg);">
-                        <span>Маска в подарок</span>
-                    </div>
-                </li>
-                <li style="clip-path: polygon(0px -100px, 500px 50%, calc(212.132px) calc(50% - 212.132px), 0px 50%); transform: rotate(315deg) translateZ(0px); background: rgb(230, 0, 129);">
-                    <div style="transform: rotate(-67.5deg);">
-                        <span>Подарочный сертификат на 3000 руб.</span>
-                    </div>
-                </li>
-            </ul>
-            <div class="dot"></div>
-            <div class="arrow"></div>
-        </div>
-    </div>
-    <button id="spinButton">Испытать удачу</button>
+	<div class="mainbox" id="mainbox">
+		<div class="box" id="box">
+			<div class="box1">
+				<span class="font span1"><b>Подарочный сертификат на 5000 руб</b></span>				
+				<span class="font span2"><b>Подарочный сертификат на 3000 руб</b></span>
+				<span class="font span3"><b>Купон на скидку 35%</b></span>
+				<span class="font span4"><b>Маска в подарок</b></span>
+			</div>
+			<div class="box2">
+				<span class="font span1"><b>Массаж 1 зоны в подарок</b></span>
+				<span class="font span2"><b>Cкидку 50% на аппаратные процедуры</b></span>
+				<span class="font span3"><b>Пилинг в подарок</b></span>
+				<span class="font span4"><b>Карбоновый пилинг со скидкой 50%</b></span>
+			</div>
+		</div>
+		<button class="spin" onclick="rotateFunction()">SPIN</button>
+	</div>
 
-    <script>
-        // JavaScript
-        const spinButton = document.getElementById('spinButton');
-        const wheel = document.querySelector('.circle');
-        const arrow = document.querySelector('.arrow');
-        let spinning = false;
-
-        spinButton.addEventListener('click', () => {
-            if (!spinning) {
-                spinning = true;
-                spinButton.disabled = true;
-
-                // Randomize rotation
-                const randomRotation = Math.floor(Math.random() * 360) + 3600; // Spin at least 10 times
-                const duration = 4000; // 4 seconds
-
-                wheel.style.transition = `transform ${duration}ms cubic-bezier(0.1, 0.6, 0.4, 1)`;
-                wheel.style.transform = `rotate(${randomRotation}deg)`;
-
-                setTimeout(() => {
-                    spinning = false;
-                    wheel.style.transition = '';
-
-                    // Calculate which segment arrow is pointing to
-                    const rotationRemainder = randomRotation % 360;
-                    const segmentIndex = Math.floor(rotationRemainder / 45);
-                    const numSegments = wheel.children.length;
-                    const actualSegmentIndex = (segmentIndex + Math.floor(numSegments / 8)) % numSegments; // Compensate for the offset
-                    console.log("Приз: ", wheel.children[actualSegmentIndex].innerText);
-                }, duration);
-            }
-        });
-    </script>
+	<script src="script.js"></script>
 </body>
 </html>
