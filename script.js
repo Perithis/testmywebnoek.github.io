@@ -29,7 +29,7 @@ function rotateFunction(){
 
 
     setTimeout(function(){
-      Swal.fire(`${prize}`);
+      Swal.fire(🎁 Ваш приз:<br><br>`${prize}`);
     }, 5000)
   }
 
