@@ -10,6 +10,7 @@ let prizes =
     "Купон на скидку 35%"
 ];
 
+let tg = window.Telegram.WebApp;
 
 
 function rotateFunction(){
@@ -27,7 +28,7 @@ function rotateFunction(){
     document.getElementById("spin").disabled = true; 
     document.getElementById("spin")
 
-
+    tg.sendData(`🎁 Ваш приз:\n\n${prize}`);
     setTimeout(function(){
       Swal.fire(`🎁 Ваш приз:\n\n${prize}`);
     }, 5000)
