@@ -31,9 +31,10 @@ function rotateFunction(){
     document.getElementById("spin").disabled = true; 
     document.getElementById("spin")
 
-    tg.sendData(`🎁 Ваш приз:\n\n${prize}`);
     setTimeout(function(){
-      Swal.fire(`🎁 Ваш приз:\n\n${prize}`);
+        Swal.fire(`🎁 Ваш приз:\n\n${prize}`);
+        tg.sendData(`🎁 Ваш приз:\n\n${prize}`);
+        tg.close();
     }, 5000)
   }
 
