@@ -13,8 +13,8 @@ let prizes =
 let tg = window.Telegram.WebApp;
 tg.expand();
 
-let usercard = document.getElementById("username");
-usercard.innerText = `${tg.initDataUnsafe.user.username}`;
+// let usercard = document.getElementById("username");
+// usercard.innerText = `${tg.initDataUnsafe.user.username}`;
 
 function rotateFunction(){
     var min = 1024;
