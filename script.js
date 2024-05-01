@@ -33,8 +33,9 @@ function rotateFunction(){
 
     setTimeout(function(){
         Swal.fire(`🎁 Ваш приз:\n\n${prize}`);
-        tg.sendData(`🎁 Ваш приз:\n\n${prize}`);
-        tg.close();
+        setTimeout(function(){
+            tg.sendData(`${prize}`);
+        }, 2000)
     }, 5000)
   }
 
