@@ -11,6 +11,7 @@ let prizes =
 ];
 
 let tg = window.Telegram.WebApp;
+tg.expand()
 
 // let usercard = document.getElementById("username");
 // usercard.innerText = `${tg.initDataUnsafe.user.username}`;
